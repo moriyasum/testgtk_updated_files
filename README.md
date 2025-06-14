@@ -1,3 +1,10 @@
+
+Details are here:
+
+https://n7sd.com/ada1-2/using-alire-to-edit-build-and-run-the-full-gtkada-testgtk-sample-suite/
+
+
+
 Modify Source Files
 
 =========================================

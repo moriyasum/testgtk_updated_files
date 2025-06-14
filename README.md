@@ -3,10 +3,12 @@ Modify Source Files
 =========================================
 1. Modify src/create_label.adb
 Reason: Non ASCII codes cause Error
+
 =========================================
 
 ~/ada/testgtk/src$ gedit create_label.adb
 Edit create_label.adb.
+
 The line #153 has some Non-ASCII characters. 
 Changed them to “XXXXXXXXXX”
 Original: & “This one is underlined in ÆüËÜžì€ÎÆþÍÑquite a funky fashion”));

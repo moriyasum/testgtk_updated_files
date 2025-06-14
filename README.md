@@ -1,8 +1,10 @@
 Modify Source Files
+
 =========================================
 1. Modify src/create_label.adb
 Reason: Non ASCII codes cause Error
 =========================================
+
 ~/ada/testgtk/src$ gedit create_label.adb
 Edit create_label.adb.
 The line #153 has some Non-ASCII characters. Changed them to “XXXXXXXXXX”
@@ -12,7 +14,9 @@ Change: & “This one is underlined in XXXXXXXXXXquite a funky fashion”));
 The line #177 has some Non-ASCII characters. Changed them to “YYY”
 Original: & “y=Î£x“
 Change: & “y=YYY“
+
 ![image](https://github.com/user-attachments/assets/f3b6d263-56dd-456d-9fd1-d4d847d14ae5)
+
 
 
 =========================================
@@ -41,6 +45,9 @@ Change:
 65 font-family: Cantarell;
 66 font-size: 20px;
 
+![image](https://github.com/user-attachments/assets/df011bbf-3842-4d55-9566-27729f534719)
+
+
 
 =========================================
 3. Modify src/create_range.adb
@@ -54,6 +61,7 @@ Line #
 109 --    Gtk_New (Scale_Button, Icon_Size_Button, 0.0, 100.0, 2.0,  --  Comment Out
 110 --             Icons => (1 .. 0 => null                          --  Comment Out 
 111 --    Pack_Start (Box3, Scale_Button, False, False, 0);          --  Comment Out
+
 
 ----------------------
  Add new Line #112 to #127:
@@ -74,6 +82,9 @@ Line #
          
          Pack_Start (Box3, Scale_Button, False, False, 0);      
       end;  
+
+![image](https://github.com/user-attachments/assets/46f51624-f8f5-4d67-8228-795abc614f41)
+
 
 
 =========================================
@@ -106,3 +117,7 @@ with Gtk.Dialog;   use Gtk.Dialog;     --  Line #31
             "clicked",
             Close_Window'Access,
             Slot_Object => Dialog);     
+
+![image](https://github.com/user-attachments/assets/f31305a2-e479-46a1-812e-575aea7f6244)
+
+

@@ -1,0 +1,46 @@
+with "config/testgtk_config.gpr";
+
+project Testgtk is
+
+   for Source_Dirs use ("src", "config");
+   for Object_Dir use "obj/" & Testgtk_Config.Build_Profile;
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use "bin";
+   for Main use ("testgtk.adb");
+
+   package Compiler is
+      for Default_Switches ("ada") use Testgtk_Config.Ada_Compiler_Switches;
+   end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;
+
+   for Source_Files use ("common.adb", "common.ads", "create_about.adb", "create_about.ads", "create_alignment.adb", "create_alignment.ads", "create_application.adb", "create_application.ads", "create_arrow.adb", "create_arrow.ads", 
+      "create_assistant.adb", "create_assistant.ads", "create_box.adb", "create_box.ads", "create_builder.adb", "create_builder.ads", "create_button_box.adb", "create_button_box.ads", "create_buttons.adb", "create_buttons.ads", 
+      "create_cairo.adb", "create_cairo.ads", "create_calendar.adb", "create_calendar.ads", "create_canvas.adb", "create_canvas.ads", "create_canvas_view_animate.adb", "create_canvas_view_animate.ads", 
+      "create_canvas_view_composite.adb", "create_canvas_view_composite.ads", "create_canvas_view_edit.adb", "create_canvas_view_edit.ads", "create_canvas_view_events.adb", "create_canvas_view_events.ads", 
+      "create_canvas_view_items.adb", "create_canvas_view_items.ads", "create_canvas_view_links.adb", "create_canvas_view_links.ads", "create_canvas_view_minimap.adb", "create_canvas_view_minimap.ads", 
+      "create_canvas_view_routes.adb", "create_canvas_view_routes.ads", "create_canvas_view_rtrees.adb", "create_canvas_view_rtrees.ads", "create_cell_view.adb", "create_cell_view.ads", "create_check_buttons.adb", 
+      "create_check_buttons.ads", "create_clipboard.adb", "create_clipboard.ads", "create_color_chooser.adb", "create_color_chooser.ads", "create_color_selection.adb", "create_color_selection.ads", "create_combo_box.adb", 
+      "create_combo_box.ads", "create_css_accordion.adb", "create_css_accordion.ads", "create_css_editor.adb", "create_css_editor.ads", "create_cursors.adb", "create_cursors.ads", "create_dialog.adb", "create_dialog.ads", "create_dnd.adb", 
+      "create_dnd.ads", "create_entry.adb", "create_entry.ads", "create_file_chooser.adb", "create_file_chooser.ads", "create_file_selection.adb", "create_file_selection.ads", "create_fixed.adb", "create_fixed.ads", 
+      "create_flow_box.adb", "create_flow_box.ads", "create_font_chooser.adb", "create_font_chooser.ads", "create_font_selection.adb", "create_font_selection.ads", "create_frame.adb", "create_frame.ads", "create_gestures.adb", 
+      "create_gestures.ads", "create_gtkada_builder.adb", "create_gtkada_builder.ads", "create_gtkada_dialog.adb", "create_gtkada_dialog.ads", "create_icon_view.adb", "create_icon_view.ads", "create_label.adb", "create_label.ads", 
+      "create_layout.adb", "create_layout.ads", "create_link_buttons.adb", "create_link_buttons.ads", "create_main_loop.adb", "create_main_loop.ads", "create_mdi.adb", "create_mdi.ads", "create_menu.adb", "create_menu.ads", 
+      "create_notebook.adb", "create_notebook.ads", "create_opacity.adb", "create_opacity.ads", "create_paned.adb", "create_paned.ads", "create_pixbuf.adb", "create_pixbuf.ads", "create_plot_3d.adb", "create_plot_3d.ads", "create_plot.adb", 
+      "create_plot.ads", "create_plot_realtime.adb", "create_plot_realtime.ads", "create_print.adb", "create_print.ads", "create_progress.adb", "create_progress.ads", "create_radio_button.adb", "create_radio_button.ads", "create_range.adb", 
+      "create_range.ads", "create_reparent.adb", "create_reparent.ads", "create_revealer.adb", "create_revealer.ads", "create_scrolled.adb", "create_scrolled.ads", "create_selection.adb", "create_selection.ads", "create_sheet.adb", 
+      "create_sheet.ads", "create_size_groups.adb", "create_size_groups.ads", "create_sources.adb", "create_sources.ads", "create_spin.adb", "create_spin.ads", "create_spinners.adb", "create_spinners.ads", "create_splittable.adb", 
+      "create_splittable.ads", "create_stack.adb", "create_stack.ads", "create_status.adb", "create_status.ads", "create_status_icons.adb", "create_status_icons.ads", "create_task_monitor.adb", "create_task_monitor.ads", 
+      "create_test_idle.adb", "create_test_idle.ads", "create_test_timeout.adb", "create_test_timeout.ads", "create_text_view.adb", "create_text_view.ads", "create_toggle_buttons.adb", "create_toggle_buttons.ads", "create_toolbar.adb", 
+      "create_toolbar.ads", "create_tooltips.adb", "create_tooltips.ads", "create_tree_filter.adb", "create_tree_filter.ads", "create_tree_view.adb", "create_tree_view.ads", "create_ui_manager.adb", "create_ui_manager.ads", 
+      "global_exception_handler.adb", "global_exception_handler.ads", "libart_demo.adb", "libart_demo.ads", "main_windows.adb", "main_windows.ads", "task_worker.adb", "task_worker.ads", "testcairo_drawing.adb", "testcairo_drawing.ads", 
+      "testgtk.adb", "testgtk_config.ads", "test_rtree.adb");
+
+end Testgtk;
+

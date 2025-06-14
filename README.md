@@ -7,11 +7,13 @@ Reason: Non ASCII codes cause Error
 
 ~/ada/testgtk/src$ gedit create_label.adb
 Edit create_label.adb.
-The line #153 has some Non-ASCII characters. Changed them to “XXXXXXXXXX”
+The line #153 has some Non-ASCII characters. 
+Changed them to “XXXXXXXXXX”
 Original: & “This one is underlined in ÆüËÜžì€ÎÆþÍÑquite a funky fashion”));
 Change: & “This one is underlined in XXXXXXXXXXquite a funky fashion”));
 
-The line #177 has some Non-ASCII characters. Changed them to “YYY”
+The line #177 has some Non-ASCII characters. 
+Changed them to “YYY”
 Original: & “y=Î£x“
 Change: & “y=YYY“
 
@@ -21,7 +23,9 @@ Change: & “y=YYY“
 
 =========================================
 2. Modify bin/css_accordion.css
+
 Reason: Obsolete codes are use
+
 =========================================
 
 ~/ada/testgtk/bin$ gedit css_accordion.css
@@ -50,8 +54,12 @@ Change:
 
 
 =========================================
+
 3. Modify src/create_range.adb
-Reason: Bug fix, only “Range” is displayed in the windows. A lot of error messages on the Terminal.
+4. 
+Reason: Bug fix, only “Range” is displayed in the windows.
+A lot of error messages on the Terminal.
+
 =========================================
 
 Line #
@@ -88,8 +96,10 @@ Line #
 
 
 =========================================
+
 4. Modify create_color_chooser.adb
 Reason: Application cannot close with Cancel button
+
 =========================================
 
 1, Add 2 lines at #30 
@@ -100,9 +110,12 @@ with Gtk.Dialog;   use Gtk.Dialog;     --  Line #31
    --  Define the Widget_Handler package for Button callbacks            --  Line #37
    package Widget_Handler is new Handlers.Callback (Gtk_Widget_Record);  -- Line #38   
 
+
 3, Add 7 lines at Line #70 (original #68), after end Destroy_Dialog
+
    ------------------
    --  Close_Window --    THE COPY OF create_color_selection.adb NEW ADDED
+   
    ------------------
    procedure Close_Window (Win : access Gtk_Widget_Record'Class) is
    begin

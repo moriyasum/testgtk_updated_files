@@ -43,7 +43,7 @@ Change: & “y=YYY“
 
 2. Modify bin/css_accordion.css
 
-Reason: Obsolete codes are use
+Reason: Obsolete codes are used
 
 =========================================
 
